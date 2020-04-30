@@ -49,7 +49,7 @@ body, html {
   stroke-width: 0.25;
   stroke-dasharray: 295;
   stroke-dashoffset: 295;
-  animation: offset 6s linear forwards, fill-mobile 0.8s 6s forwards;
+  animation: offset 4s linear forwards, fill-mobile 0.8s 4s forwards;
 }
 
 .paused {
@@ -139,7 +139,7 @@ kbd {
     stroke-width: 0.25;
     stroke-dasharray: 295;
     stroke-dashoffset: 295;
-    animation: offset 6s linear forwards, fill-desktop 0.8s 6s forwards;
+    animation: offset 4s linear forwards, fill-desktop 0.8s 4s forwards;
   }
 
   .keys {

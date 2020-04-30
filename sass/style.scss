@@ -55,7 +55,7 @@ body,html {
     stroke-width: .25;
     stroke-dasharray: 295;
     stroke-dashoffset: 295;
-    animation: offset 6s linear forwards, fill-mobile .8s 6s forwards;
+    animation: offset 4s linear forwards, fill-mobile .8s 4s forwards;
 }
 
 //sets display to hidden for video not currently playing
@@ -156,7 +156,7 @@ kbd {
         stroke-width: .25;
         stroke-dasharray: 295;
         stroke-dashoffset: 295;
-        animation: offset 6s linear forwards, fill-desktop .8s 6s forwards;;
+        animation: offset 4s linear forwards, fill-desktop .8s 4s forwards;;
     }
     
     .keys {
