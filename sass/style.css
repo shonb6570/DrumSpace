@@ -1,3 +1,29 @@
+/* --------------------------------
+        Keyframes
+---------------------------------*/
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes offset {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fill-mobile {
+  100% {
+    fill: white;
+  }
+}
+@keyframes fill-desktop {
+  100% {
+    fill: #ffc600;
+  }
+}
 body, html {
   margin: 0;
   padding: 0;
@@ -19,21 +45,17 @@ body, html {
 }
 
 #logo path {
-  fill: white;
+  stroke: white;
+  stroke-width: 0.25;
+  stroke-dasharray: 295;
+  stroke-dashoffset: 295;
+  animation: offset 6s linear forwards, fill-mobile 0.8s 6s forwards;
 }
 
 .paused {
   display: none;
 }
 
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 #bgVideo {
   position: absolute;
   top: 0;
@@ -113,7 +135,11 @@ kbd {
   }
 
   #logo path {
-    fill: #ffc600;
+    stroke: #ffc600;
+    stroke-width: 0.25;
+    stroke-dasharray: 295;
+    stroke-dashoffset: 295;
+    animation: offset 6s linear forwards, fill-desktop 0.8s 6s forwards;
   }
 
   .keys {
