@@ -1,29 +1,15 @@
-/* --------------------------------
-        Keyframes
----------------------------------*/
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes offset {
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-@keyframes fill-mobile {
-  100% {
-    fill: white;
-  }
-}
-@keyframes fill-desktop {
-  100% {
-    fill: #ffc600;
-  }
-}
+/* ============================================= */
+/*              Descriptive colors               */
+/* ============================================= */
+/* ============================================= */
+/*              Base style colors                */
+/* ============================================= */
+/* ============================================= */
+/*                Font Stacks                    */
+/* ============================================= */
+/* ============================================= */
+/*              Base                             */
+/* ============================================= */
 body, html {
   margin: 0;
   padding: 0;
@@ -36,22 +22,20 @@ body, html {
   justify-content: center;
 }
 
-#logo {
-  position: absolute;
-  top: 5%;
-  z-index: 5;
-  height: 200px;
-  width: 450px;
+/* --------------------------------
+        Keyframes
+---------------------------------*/
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-
-#logo path {
-  stroke: white;
-  stroke-width: 0.25;
-  stroke-dasharray: 295;
-  stroke-dashoffset: 295;
-  animation: offset 4s linear forwards, fill-mobile 0.8s 4s forwards;
-}
-
+/* --------------------------------
+       BG video styles
+---------------------------------*/
 .paused {
   display: none;
 }
@@ -77,6 +61,59 @@ body, html {
   z-index: -1;
 }
 
+/* ============================================= */
+/*          SVG Keyframes                        */
+/* ============================================= */
+@keyframes offset {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fill-mobile {
+  100% {
+    fill: #FFF;
+  }
+}
+@keyframes fill-desktop {
+  100% {
+    fill: #ffc600;
+  }
+}
+/* ============================================= */
+/*          Main logo                            */
+/* ============================================= */
+#logo {
+  position: absolute;
+  top: 5%;
+  z-index: 5;
+  height: 200px;
+  width: 450px;
+}
+@media (min-width: 1024px) {
+  #logo {
+    top: 0;
+    height: 400px;
+    width: 600px;
+  }
+}
+
+#logo path {
+  stroke: #FFF;
+  stroke-width: 0.25;
+  stroke-dasharray: 295;
+  stroke-dashoffset: 295;
+  animation: offset 4s linear forwards, fill-mobile 0.8s 4s forwards;
+}
+@media (min-width: 1024px) {
+  #logo path {
+    stroke: #ffc600;
+    stroke-width: 0.25;
+    stroke-dasharray: 295;
+    stroke-dashoffset: 295;
+    animation: offset 4s linear forwards, fill-desktop 0.8s 4s forwards;
+  }
+}
+
 .keys {
   position: absolute;
   top: 25%;
@@ -91,6 +128,11 @@ body, html {
   justify-content: center;
   z-index: 1;
 }
+@media (min-width: 1024px) {
+  .keys {
+    top: 30%;
+  }
+}
 
 .key {
   border: 0.2rem solid #00fff2;
@@ -103,49 +145,11 @@ body, html {
   transition: all 0.07s ease;
   width: 4.7rem;
   text-align: center;
-  color: white;
+  color: #FFF;
   background: rgba(0, 0, 0, 0.4);
   text-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.75);
 }
-
-.playing {
-  transform: scale(1.1);
-  border-color: #ffc600;
-  box-shadow: 0 0 1rem #ffc600;
-}
-
-kbd {
-  display: block;
-  font-size: 2.5rem;
-  font-family: "Quicksand", sans-serif;
-}
-
-.sound {
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  color: #ffc600;
-}
-
 @media (min-width: 1024px) {
-  #logo {
-    top: 0;
-    height: 400px;
-    width: 600px;
-  }
-
-  #logo path {
-    stroke: #ffc600;
-    stroke-width: 0.25;
-    stroke-dasharray: 295;
-    stroke-dashoffset: 295;
-    animation: offset 4s linear forwards, fill-desktop 0.8s 4s forwards;
-  }
-
-  .keys {
-    top: 30%;
-  }
-
   .key {
     box-shadow: 0 0 1rem;
     border-color: #ffc600;
@@ -155,16 +159,38 @@ kbd {
     background: rgba(0, 0, 0, 0.4);
     text-shadow: 0 0 1rem rgba(255, 255, 255, 0.75);
   }
+}
 
+.playing {
+  transform: scale(1.1);
+  border-color: #ffc600;
+  box-shadow: 0 0 1rem #ffc600;
+}
+@media (min-width: 1024px) {
   .playing {
     border-color: #00fff2;
     box-shadow: 0 0 1rem #00fff2;
   }
+}
 
+kbd {
+  display: block;
+  font-size: 2.5rem;
+  font-family: "Quicksand", sans-serif;
+}
+@media (min-width: 1024px) {
   kbd {
     font-size: 4rem;
   }
+}
 
+.sound {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #ffc600;
+}
+@media (min-width: 1024px) {
   .sound {
     font-size: 1rem;
     letter-spacing: 0.2rem;
